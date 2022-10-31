@@ -1,0 +1,10 @@
+.env
+/.editorconfig
+/.figma.yml
+/.husky/
+/.prettierignore
+/.prettierrc
+/.vscode/
+bin
+lib
+node_modules/

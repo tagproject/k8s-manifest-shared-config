@@ -1,0 +1,50 @@
+sharedDir: ".config"
+outputDir: "lib"
+
+mergeRules:
+  ".gitignore": true
+  ".husky/commit-msg": true
+  ".npmignore": true
+
+ignorePatterns:
+  ".gitignore": [
+    ".env",
+    "/.husky/",
+    "node_modules/",
+  ]
+  ".npmignore": [
+    ".config",
+    ".env",
+    ".gitattributes",
+    ".github",
+    ".husky",
+    "node_modules/",
+  ]
+
+executableFiles: [
+  ".husky/commit-msg",
+]
+
+scripts:
+  "generate": "npm-run-all generate:*"
+  "generate:changelog": "node --experimental-specifier-resolution=node node_modules/.bin/changelog generate --bump"
+  "prepare": "npm-run-all prepare:*"
+  "prepare:config": "node --experimental-specifier-resolution=node node_modules/.bin/base-shared-config"
+  "prepare:husky": "husky install"
+  "release": "npm-run-all prepare lint generate"
+
+dependencies:
+  - "changelog-guru"
+  - "husky": "8.x"
+  - "npm-run-all"
+
+
+
+
+
+
+
+
+
+
+
