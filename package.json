@@ -1,0 +1,59 @@
+{
+  "name": "@tagproject/k8s-manifest-shared-config",
+  "version": "1.0.1",
+  "description": "Standard shared config for tagproject libraries with TypeScript",
+  "license": "MIT",
+  "homepage": "https://github.com/tagproject/k8s-manifest-shared-config#readme",
+  "author": {
+    "name": "Daniil Ryazanov",
+    "email": "kein@tagproject.ru"
+  },
+  "keywords": [
+    "config",
+    "library",
+    "shared",
+    "standard",
+    "ts"
+  ],
+  "bugs": "https://github.com/tagproject/k8s-manifest-shared-config/issues",
+  "types": "./lib/index.d.ts",
+  "type": "module",
+  "exports": "./lib/index.js",
+  "bin": {
+    "k8s-manifest-shared-config": "bin/k8s-manifest-shared-config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tagproject/k8s-manifest-shared-config.git"
+  },
+  "engines": {
+    "node": "^14.13.1 || >=16.0.0"
+  },
+  "scripts": {
+    "build": "node --experimental-specifier-resolution=node node_modules/.bin/standard-shared-config build",
+    "generate": "npm-run-all generate:*",
+    "generate:changelog": "node --experimental-specifier-resolution=node node_modules/.bin/changelog generate --bump",
+    "lint": "npm-run-all lint:*",
+    "lint:spell": "cspell -c .vscode/cspell.json --no-summary \"**/*.{js,ts,tsx,md,yml,json}\"",
+    "prepare": "npm-run-all prepare:*",
+    "prepare:config": "node --experimental-specifier-resolution=node node_modules/.bin/base-shared-config",
+    "prepare:docs": "node --experimental-specifier-resolution=node node_modules/.bin/docs-shared-config",
+    "prepare:husky": "husky install",
+    "prepare:vscode": "node --experimental-specifier-resolution=node node_modules/.bin/vscode-shared-config",
+    "release": "npm-run-all prepare lint build generate"
+  },
+  "dependencies": {
+    "standard-shared-config": "^4.0.15"
+  },
+  "devDependencies": {
+    "@tagproject/base-shared-config": "^3.0.1",
+    "@tagproject/docs-shared-config": "^1.0.4",
+    "@tagproject/vscode-shared-config": "^2.0.2",
+    "changelog-guru": "^4.0.6",
+    "cspell": "^6.13.3",
+    "figma-portal": "^1.0.2",
+    "husky": "^8.0.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.7.1"
+  }
+}
