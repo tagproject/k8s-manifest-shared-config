@@ -46,7 +46,7 @@
     "standard-shared-config": "^4.0.15"
   },
   "devDependencies": {
-    "@tagproject/base-shared-config": "^3.0.1",
+    "@tagproject/base-shared-config": "^3.2.1",
     "@tagproject/docs-shared-config": "^1.0.4",
     "@tagproject/vscode-shared-config": "^2.0.2",
     "changelog-guru": "^4.0.6",
