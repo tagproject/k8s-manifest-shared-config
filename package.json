@@ -1,6 +1,6 @@
 {
   "name": "@tagproject/k8s-manifest-shared-config",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Standard shared config for kubernetes manifests",
   "license": "MIT",
   "homepage": "https://github.com/tagproject/k8s-manifest-shared-config#readme",
@@ -10,11 +10,11 @@
   },
   "keywords": [
     "config",
-    "shared",
-    "standard",
     "k8s",
     "kubernetes",
-    "manifest"
+    "manifest",
+    "shared",
+    "standard"
   ],
   "bugs": "https://github.com/tagproject/k8s-manifest-shared-config/issues",
   "types": "./lib/index.d.ts",
