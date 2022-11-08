@@ -1,6 +1,6 @@
 # :bug: Bug Fixes
 
-- Fix shared config prepare command [`9e56ec1`](https://github.com/tagproject/k8s-manifest-shared-config/commit/9e56ec10cb3aad181304236faae39d148fc32beb)
+- Remove configure actions [`e68f44d`](https://github.com/tagproject/k8s-manifest-shared-config/commit/e68f44d4d80fb178194850caee445166a097bd6c)
 
 ---
 
