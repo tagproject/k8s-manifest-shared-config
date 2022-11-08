@@ -1,7 +1,7 @@
 {
   "name": "@tagproject/k8s-manifest-shared-config",
   "version": "1.2.0",
-  "description": "Standard shared config for tagproject libraries with TypeScript",
+  "description": "Standard shared config for kubernetes manifests",
   "license": "MIT",
   "homepage": "https://github.com/tagproject/k8s-manifest-shared-config#readme",
   "author": {
@@ -10,10 +10,11 @@
   },
   "keywords": [
     "config",
-    "library",
     "shared",
     "standard",
-    "ts"
+    "k8s",
+    "kubernetes",
+    "manifest"
   ],
   "bugs": "https://github.com/tagproject/k8s-manifest-shared-config/issues",
   "types": "./lib/index.d.ts",
