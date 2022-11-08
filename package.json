@@ -10,11 +10,11 @@
   },
   "keywords": [
     "config",
-    "shared",
-    "standard",
     "k8s",
     "kubernetes",
-    "manifest"
+    "manifest",
+    "shared",
+    "standard"
   ],
   "bugs": "https://github.com/tagproject/k8s-manifest-shared-config/issues",
   "types": "./lib/index.d.ts",
