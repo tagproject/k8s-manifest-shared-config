@@ -1,4 +1,4 @@
-# k8s-manifest-shared-config
+<p align="center"><img src="https://cdn.jsdelivr.net/gh/tagproject/art/packages/k8s-manifest-shared-config/banner.svg" alt="Package logo"></p>
 
 <p align="center">
     <a href="https://github.com/tagproject/k8s-manifest-shared-config/actions"><img src="https://github.com/tagproject/k8s-manifest-shared-config/actions/workflows/build.yml/badge.svg" alt="Build Status"></a>
@@ -21,4 +21,37 @@ npm install @tagproject/k8s-manifest-shared-config --save-dev
 - Add `"prepare": "npm-run-all prepare:*"`
 - Run `npm run prepare`
 
-> use `node --experimental-specifier-resolution=node node_modules/.bin/k8s-manifest-shared-config` while [ESM](https://nodejs.org/api/esm.html) is in `Experimental`
+## Configs
+
+## include shared configs:
+
+- [@tagproject/docs-shared-config](https://www.npmjs.com/package/@tagproject/docs-shared-config): `1.x`
+- [@tagproject/vscode-shared-config](https://www.npmjs.com/package/@tagproject/vscode-shared-config): `2.x`
+
+### extract actions and hooks:
+
+- `.github/*`
+- `.husky/*`
+
+### merge files:
+
+- `.husky/commit-msg`
+- `.gitignore`
+- `.npmignore`
+
+### append to `package.json`:
+
+#### scripts:
+
+- `generate` - run all `generate:*`
+- `generate:changelog` - generate changelog
+- `prepare:config` - rebuild local configs
+- `prepare:husky` - install husky hooks
+- `release` - lint and generate changelog, bump package version
+
+#### dependencies:
+
+- [@tagproject/docs-shared-config](https://www.npmjs.com/package/@tagproject/docs-shared-config): `1.x`
+- [@tagproject/vscode-shared-config](https://www.npmjs.com/package/@tagproject/vscode-shared-config): `2.x`
+- [changelog-guru](https://www.npmjs.com/package/changelog-guru): `latest`
+- [husky](https://www.npmjs.com/package/husky): `8.x`
